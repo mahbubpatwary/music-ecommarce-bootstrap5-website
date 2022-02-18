@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus{
+    outline: 0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+
+}
+
+a:hover{
+    color: var(--primary-color);
+}
+
+ol,
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* variable Define  */
+
+:root{
+    --primary-color : #fd8eaf;
+    --white-color: #fff;
+    --text-color: #9e9999;
+    --black-color: #000;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+
+
+
+
+/* custom scroll bar  */
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+
+
+
+/* custom css  */
+
+h1{
+    font-size: 6rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 span{
+    color: var(--white-color);
+
+}
+
+h2{
+    font-weight: 700;
+    position: relative;
+    font-size: 2.8rem;
+    text-transform: capitalize;
+    color: var(--black-color);
+    line-height: 3.7rem;
+}
+
+
+h2::before{
+    background: #ef6d9f;
+    border-radius: 0.3rem;
+    content: '';
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    width: 1.8rem;
+    height: 0.3rem;
+}
+
+h4{
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-bottom: 0.9rem;
+    transition: all 0.3 linear;
+}
+
+h5{
+    color: var(--black-color);
+    text-transform: capitalize;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+p{
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.7rem;
+    letter-spacing: 0.06rem;
+}
+
+.main-btn{
+    width: 9.325rem;
+    height: 3.125rem;
+    border: 0.06rem solid var(--primary-color);
+    font-size: 1.1rem;
+    color: var(--black-color);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+    transition: 0.3s;
+
+    
+}
+
+.main-btn::before,
+.main-btn::after{
+    position: absolute;
+    background: var(--white-color);
+    z-index: -1;
+    transition: 0.3s;
+    content: '';
+}
+
+.main-btn::after{
+    width: 9.375rem;
+    height: 1.875rem;
+}
+
+
+.main-btn::before{
+    width: 8.125rem;
+    height: 3.125rem;
+}
+
+.main-btn:hover::before{
+    width: 0px;
+    background: var(--white-color);
+}
+.main-btn:hover::after{
+    height: 0;
+    background: var(--white-color);
+
+}
+
+
+.main-btn:hover{
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+
+
+.wrapper{
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+}
+
+.text-content{
+    width: 60%;
+    margin: auto;
+}
+
+
+
+
+/* header css  */
+
+.navigation-wrap{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 10000;
+    transition: all 0.3 ease-out;
+
+}
+
+.navigation-wrap .nav-item{
+    padding: 0 0.5rem;
+    transition: all 200ms linear;
+}
+
+
+.navbar-toggler:focus{
+
+    outline: none;
+    border: unset;
+    box-shadow: none;
+}
+
+.nav-link{
+    padding-top: 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--white-color);
+    letter-spacing: 0.06rem;
+
+}
+
+.nav-link:hover,
+.nav-link.active{
+    color: var(--primary-color);
+
+}
+
+.navigation-wrap .main-btn{
+    color: var(--white-color);
+    margin: auto;
+
+}
+.navigation-wrap .main-btn:hover{
+    background-color: transparent;
+}
+.navigation-wrap .main-btn::before,
+.navigation-wrap .main-btn::after{
+    background-color: transparent;
+}
+
+.navigation-wrap.scroll-on{
+
+    position: fixed;
+    background-color: var(--black-color);
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0.25rem 1.75rem 0 rgba(0, 0, 0, 0.09);
+    transition: all .15s ease-in-out 0s;
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active{
+    color: var(--primary-color);
+}
+
+.navigation-wrap.scroll-on .main-btn{
+    color: var(--white-color);
+    margin: auto;
+}
+
+.navigation-wrap.scroll-on .main-btn:hover{
+    background-color: transparent;
+
+}
+.navigation-wrap.scroll-on .main-btn::before,
+.navigation-wrap.scroll-on .main-btn::after{
+    background-color: var(--black-color);
+}
+
+
+
+
+
+
+
+
+/* top banner css style  */
+
+.hero_slider .carousel-caption{
+    text-align: left;
+    top: 50%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    transform: translate(-75%, -35%);
+    max-width: 1320px;
+}
+ 
+.hero_slider .carousel-caption h2,
+.hero_slider .carousel-caption p{
+    color: var(--white-color);
+}
+
+
+
+
+
+
+/* about us section desigen  */
+
+.about-section .carousel-inner{
+    border-radius: 0 0 5rem;
+}
+
+.about-section .main-btn span,
+.style-section .main-btn span{
+    color: var(--black-color);
+}
+
+.about-section .carousel-indicators{
+    margin-bottom: -2rem;
+}
+
+.about-section .carousel-indicators [data-bs-target]{
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+
+}
+
+
+
+/* Ractangle Shape design  */
+.rectangle-shape,
+.circle-shape {
+    content: '';
+    border: 0.25rem solid;
+    border-bottom-color: #ef6d9f;
+    border-right-color: #ef6d9f;
+    border-top-color: #ee8d6d;
+    border-left-color: #ee8d6d;
+    background-image: linear-gradient(to bottom, #ee8d6d 0%, #ef6d9f 100%);
+    background-image: --webkit-linear-gradient(to bottom, #ee8d6d 0%, #ef6d9f 100%);
+
+    
+    background-size: 100% 0;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin: auto;
+
+
+}
+
+.rectangle-shape.small,
+.circle-shape.small{
+    border-width: 0.18rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    animation: animationframesone 35s alternate infinite linear;
+
+}
+
+.rectangle-shape.large,
+.circle-shape.large{
+    width: 2.25rem;
+    height: 2.25rem;
+    animation: animationframesthree 35s alternate infinite linear;
+    
+}
+
+
+.circle-shape.large{
+    left: 0;
+    right: 0;
+    bottom: 15%;
+    opacity: 0.5;
+}
+
+.rectangle-shape.small{
+    left: 0;
+    bottom: 10%;
+}
+
+
+.rectangle-shape{
+    border-radius: 0.1876rem;
+
+}
+.circle-shape{
+    border-radius: 50%;
+}
+
+
+
+@keyframes animationframesone  {
+    0%{
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20%{
+        transform: translate(4.5rem, -0.06rem) rotate(36deg);
+    }
+    40%{
+        transform: translate(8.8rem, 4.5rem) rotate(72deg);
+    }
+    60%{
+        transform: translate(5.1rem, 7.6rem) rotate(108deg);
+    }
+    80%{
+        transform: translate(-2.1rem, 4.5rem) rotate(144deg);
+    }
+    1000%{
+        transform: translate(0, 0) rotate(1deg);
+    }
+    
+}
+
+
+@keyframes animationframesthree  {
+    0%{
+        transform: translate(0, 0) rotate(0deg) scale(1.2);
+    }
+    20%{
+        transform: translate(-4.25rem, -6.25rem) rotate(70deg) scale(0.5);
+    }
+    40%{
+        transform: translate(7.1rem, 3.4rem) rotate(120deg) scale(1);
+    }
+    60%{
+        transform: translate(2.1rem, 8.7rem) rotate(155deg) scale(1.2);
+    }
+    80%{
+        transform: translate(-2.1rem, 5.6rem) rotate(180deg) scale(0.5);
+    }
+    1000%{
+        transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    
+}
+
+
+
+
+
+/* feature section  */
+
+.features .card{
+    cursor: pointer;
+}
+.features .card .icon{
+    box-shadow: 0.06rem 0.25rem 1.25rem rgb(26 26 26/ 9%);
+    border-radius: 0;
+    padding: 1.25rem 0;
+    width: 5rem;
+    text-align: center;
+    height: auto;
+    margin-bottom: 2.5rem;
+    border-top-right-radius: 1.6rem;
+
+}
+
+.features .card img{
+    display: block;
+    opacity: .75;
+    margin: 0 auto;
+    filter: brightness(0);
+}
+
+.features .card:hover .icon img{
+    filter: brightness(1);
+}
+
+.features .card:hover h4{
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+/* choose section design  */
+
+
+.choose h2::before,
+.contacts-section h2::before{
+    left: 47%;
+
+}
+
+.choose .card .product-star{
+    color: var(--text-color);
+    font-size: 100%;
+}
+
+
+.choose .card a h4{
+    color: #1a1a1a;
+    display: inline-block;
+    font-size: 1.5rem;
+    width: 100%;
+    font-weight: 500;
+    margin: 0 0 0.9rem;
+    line-height: normal;
+}
+
+
+.choose .card:hover a h4{
+    color: var(--primary-color);
+}
+
+
+.choose .card .product-img{
+    width: 100%;
+    height: 21rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: all .3s ;
+}
+
+
+.choose .card:hover .product-img{
+    transition: all .3s;
+    transform: scale(1.1);
+}
+
+
+#zoom-img{
+    background-image: url(../images/img/Product1.jpg);
+}
+#zoom-img-1{
+    background-image: url(../images/img/Product2.jpg);
+}
+#zoom-img-2{
+    background-image: url(../images/img/Product3.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+/* contract section  */
+
+form .form-group,
+form input[type=text]{
+    box-shadow: 0.06rem 0.37rem 0.6rem 0.18rem rgb(26 26 26 / 7%);
+    display: inline-block;
+    margin: 0 0.9rem;
+    border-radius: 1.8rem;
+}
+
+form input[type=email],
+form input[type=text]{
+    display: inline-block;
+    padding: 0 1.5rem;
+    height: 4.3rem;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    margin-bottom: 0;
+    border-radius: 1.8rem;
+}
+
+form input[type=email],
+form input[type=text],
+form .form-group{
+    background-color: var(--white-color);
+    color: var(--text-color);
+    border: 0.06rem solid rgba(225, 225, 225, 0.7);
+}
+
+
+
+
+
+
+
+/* footer section desigen / */
+
+footer{
+    background: var(--black-color);
+}
+.footer .footer-social{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
+.footer .footer-social a:hover i{
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

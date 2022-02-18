@@ -1,0 +1,314 @@
+
+
+/* variable Define  */
+
+:root{
+    --primary-color : #fd8eaf;
+    --white-color: #fff;
+    --text-color: #9e9999;
+    --black-color: #000;
+}
+
+
+
+
+
+/* for laptop screen  */
+
+
+@media (max-width: 1030px) {
+    
+
+    h1{
+        font-size: 3.5rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+    .wrapper{
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* for tab screen  */
+
+@media (max-width: 991px) {
+    
+
+    h4,
+    .choose .card a h4{
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+        line-height: 1.3rem;
+    }
+
+    .text-content{
+        width: 100%;
+
+    }
+
+
+    /* banner designf  */
+
+    #home{
+        padding: 4.3rem 0 0.3rem;
+    }
+
+
+    .navigation-wrap .navbar-brand img{
+        height: 2.8rem;
+
+    }
+
+    .navbar-toggler{
+        color: var(--text-color);
+    }
+
+    .navbar-toggler i{
+        color: var(--text-color);
+        line-height: 2;
+    }
+
+    .navigation-wrap{
+        text-align: center;
+        background-color: var(--black-color);
+    }
+
+
+    .navigation-wrap .nav-link{
+        line-height: 1.8rem;
+
+    }
+
+
+
+
+    /* top banner section  */
+
+    .hero_slider .carousel-caption{
+        transform: translate(-70%, -50%);
+    }
+
+
+    /* features section  */
+
+    .features .card .icon{
+        margin-bottom: 20px;
+    }
+
+
+    /* headphone  */
+    #zoom-img,
+    #zoom-img-1,
+    #zoom-img-2{
+        height: 220px;
+    }
+
+
+
+
+
+}
+
+
+
+
+/* for medium devices screen  */
+
+@media (max-width: 767px) {
+    .main-btn {
+        margin: auto;
+    }
+    .text-sec{
+        text-align: center;
+        padding-top: 1.8rem;
+    }
+
+    h2::before{
+        left: 45%;
+    }
+
+
+
+
+    .hero_slider .carousel-caption{
+        transform: translate(-45%, -70%);
+    }
+
+    .hero_slider .carousel-caption h2::before{
+        left: 0;
+    }
+
+
+
+
+
+
+
+
+}
+
+
+
+
+/* for small screen  */
+
+@media (max-width: 575px) {
+    
+
+    h1{
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+
+    h2{
+        font-size: 1.2rem;
+        line-height: 1rem;
+        margin-bottom: 5px;
+    }
+
+
+
+
+    .about-slider,
+    .feature-img-box,
+    .style-img{
+        width: 50%;
+        margin: auto;
+    }
+
+    .about-section .carousel-inner{
+        border-radius: 0 0 1.87rem;
+    }
+
+
+    
+    /* headphone  */
+    #zoom-img,
+    #zoom-img-1,
+    #zoom-img-2{
+        height: 13.5rem;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+/* for mobile screen  */
+
+@media (max-width: 430px) {
+    
+    h2::before{
+        top: -0.8rem;
+    }
+
+    .hero_slider .carousel-caption p{
+        font-size: 0.75rem;
+        line-height: 1.12rem;
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
